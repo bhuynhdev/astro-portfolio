@@ -1,0 +1,55 @@
+.markdown {
+	line-height: 1.75;
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		position: relative;
+		.link-icon-hover {
+			font-size: 1rem;
+			color: #333;
+			position: absolute;
+			left: -25px;
+			top: 50%;
+			transform: translateY(-50%);
+			opacity: 0;
+		}
+		&:hover {
+			.link-icon-hover {
+				opacity: 1;
+			}
+		}
+	}
+
+	h3 {
+		margin-top: 0.25em;
+		margin-bottom: 0.25em;
+	}
+
+	a:not(.link-icon-hover) {
+		color: hsl(180, 80%, 22%);
+		font-weight: 500;
+		border-bottom: 2px dashed currentColor;
+		position: relative;
+		&:hover {
+			border-bottom: 2px solid currentColor;
+		}
+	}
+
+	p:not(:last-child) {
+		margin-bottom: 1em;
+	}
+
+	ul {
+		list-style-type: disc;
+		margin: 0 0 1em 1em;
+	}
+
+	code {
+		// background-color: #e5e5e5;
+		padding: 1.5px 3px;
+	}
+}

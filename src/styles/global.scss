@@ -1,0 +1,83 @@
+@use 'reset';
+@use 'layout';
+@use 'markdown';
+
+html {
+	font-size: clamp(1rem, 0.05vw + 1rem, 1.375rem);
+	scroll-behavior: smooth;
+	scroll-padding-top: 3rem;
+}
+
+body {
+	font-family: 'Karla', sans-serif;
+	color: var(--clr-text);
+	line-height: 1.5;
+	background-color: var(--clr-bg);
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+h1 {
+	font-size: 2rem;
+}
+
+h2 {
+	font-size: 1.75rem;
+}
+
+h3 {
+	font-size: 1.5rem;
+}
+
+h4,
+h5,
+h6 {
+	font-size: 1.25rem;
+}
+
+p {
+	font-size: 1rem;
+}
+
+@media screen and (min-width: 30em) {
+	h1 {
+		font-size: 2.5rem;
+	}
+
+	h2 {
+		font-size: 2rem;
+	}
+
+	h3 {
+		font-size: 1.75rem;
+	}
+
+	h4,
+	h5,
+	h6 {
+		font-size: 1.5rem;
+	}
+}
+
+@media screen and (min-width: 70em) {
+	h1 {
+		font-size: 3rem;
+	}
+
+	h2 {
+		font-size: 2.5rem;
+	}
+
+	h3 {
+		font-size: 2rem;
+	}
+
+	h4,
+	h5,
+	h6 {
+		font-size: 1.5rem;
+	}
+}

@@ -1,0 +1,117 @@
+---
+import SkillIcon from "./SkillIcon.astro";
+
+const frontEndSkills = [
+  "React",
+  "Angular",
+  "Remix",
+  "Nextjs",
+  "JavaScript",
+  "Typescript",
+  "HTML",
+  "SASS",
+  "TailwindCSS"
+];
+const backEndSkills = ["Nodejs", "Express", "NestJS", "Fastify", "MongoDB", "MySQL", "Python", "FastAPI", "Flask"];
+const developerTools = ["Azure", "Git", "Github", "Gitlab", "Jest", "VsCode"];
+---
+
+<section class="skills" id="skills">
+  <h2>Skills</h2>
+  <div class="content-wrapper">
+    <div class="skill-category">
+      <div class="headline">
+        <h3>Frontend</h3>
+        <p>Crafting user-friendly interfaces</p>
+      </div>
+      <ul class="list">
+        {
+          frontEndSkills.map((skill) => (
+            <li class="skill-item">
+              <SkillIcon iconName={skill} size={40} />
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+    <div class="skill-category">
+      <div class="headline">
+        <h3>Backend</h3>
+        <p>Creating scaleable systems</p>
+      </div>
+      <ul class="list">
+        {
+          backEndSkills.map((skill) => (
+            <li class="skill-item">
+              <SkillIcon iconName={skill} size={40} />
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+    <div class="skill-category">
+      <div class="headline">
+        <h3>Developer tools</h3>
+        <p>Boosting productivity with the right tool</p>
+      </div>
+      <ul class="list">
+        {
+          developerTools.map((skill) => (
+            <li class="skill-item">
+              <SkillIcon iconName={skill} size={40} />
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+  .content-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    > * {
+      flex: 1;
+    }
+  }
+
+  .skill-category {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .list {
+    margin-top: 2em;
+    display: flex;
+    gap: 1.5em 2.25em;
+    flex-wrap: wrap;
+    justify-content: center;
+    .skill-item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 12px;
+      transform: scale(1);
+      transition: transform 200ms;
+      &:hover {
+        transform: scale(1.15);
+      }
+    }
+  }
+
+  @media screen and (min-width: 60em) {
+    .content-wrapper {
+      flex-direction: row;
+      gap: 4em;
+      align-items: flex-start;
+    }
+  }
+</style>

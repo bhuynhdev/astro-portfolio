@@ -1,0 +1,54 @@
+---
+title: Timeblock Calendar project
+description: Timeblock Calendar project
+pubDate: October 18, 2022
+updatedDate: July 14, 2023
+---
+
+### Project overview
+
+> "Block your time or lose it forever"
+
+Timeblock calendar is a web application to ⚡boost⚡ your productivity by forcing you to create tasks that associate with specific time frames (the time-block method). As a result, you organize and carry out all your to-dos in a structured and [SMART](https://www.atlassian.com/blog/productivity/how-to-write-smart-goals) manner without forgetting or procrastinating.
+
+### Inspiration
+
+Inspired by Elon Musk's [time-blocking method](https://todoist.com/productivity-methods/time-blocking), I have long been coordinating my Google Calendar with the gamified todo app [Habitica](https://habitica.com) as my productivity system. However, I wish for a product that can do both, and after having found that no apps matched my wants, I decided to code up **Timeblock Calendar** as the perfect integration - an interactive calendar for frictionless timeblocking, and a score system for that "checked off" feeling of power and motivation.
+
+This project was also constructed on the occasation of me wanting to pick up a JS framework after learning vanilla JavaScript. The MERN stack (MongoDB, Express, React, Node) was very popular then and easy to get started so it was the perfect tool for my first full-stack web application learning opportunity.
+
+### How I built it
+
+I built the app client-side with React.js, and the backend is handled by Express.js and MongoDB. The React.js client has a calendar and a todolist components, and communicate with the backend via HTTP requests (using `fetch`). In turn, the backend connects with the MongoDB Atlas database instance through `mongoose` library using a URI and exposes the `/api/events` and `/api/scores` routes for the frontend to make requests to and in turn perform the appropriate business logic to execute database create/read/update/delete operations.
+
+On the frontend, users can add time-blocks through a form presented at "/addevent", which submits the form data (including title, description, and start and end time) to the backend, and the backend adds new data into the MongoDB Atlas instance.
+
+On the app's index page, when loaded, both event and score data is fetched from the backend (concurrently through `Promise.all`) to display onto the calendar through the `fullcalendar` library, which also provides many built-in functionalities such as different calendar views and event card interaction. Tasks are put on the right hand-side with options to filter and check off. All filters are done client-side with JavaScipt, and state updates are "pushed" onto the database through background HTTP requests to the correct `/api/events` endpoint.
+
+Frontend styling was done through the `React Bootstrap` library.
+
+### Challenges
+
+As it was my first time working with React, I struggled with adding the FullCalendar library; I mistakenly read their vanilla JavaScript doc instead of the React version, and didn't know how to use the libary inside React. Eventually, I watched more YouTube videos and understood more about the React workflow, and was able to succesfully integrate the library onto my frontend.
+
+Another challenge was the full-stack application deployment flow. As the client and the server were effectively two different applications, I did not initally know how to effectively deploy them both together. At first I used Heroku to deploy the backend first, then use a `postbuild` command to `cd` into the "client" folder and `npm run start` there to boot up the Client app in the same deployment. The result was two apps running on two different ports in the same Heroku dyno. However, after [Heroku announces removal of their free tier](https://techcrunch.com/2022/08/25/heroku-announces-plans-to-eliminate-free-plans-blaming-fraud-and-abuse/), I decided to switch to [Railway](https://railway.app) for my deployment. Railway uses a different strategy for deployment where there can only one app per service; therefore, I had to change my deployment plan into: building the React client first and using Express.js to serve the built static files. This way, the React code only needs to be built (not actively running), and I only need one Express.js service to host my backend route as well as serving my client-side rendering React.js Todo Calendar. I think the second strategy is a bit better, but it had also taken me some time to thoroughly understand how each of the frontend and backend technology works and how they work together.
+
+Another challenge was working with Date object in JavaScript and getting them to the exact format that the FullCalendar library wants. For this, I researched and used [dayjs](https://day.js.org/) - Thanks the Dayjs team so much for a minimal package with such smooth and awesome developer-experience.
+
+### Accomplishments that I'm proud of
+
+I am really proud of being able to code my first original project idea into fruition by applying all the different knowledge I have acquired throughout the web dev learning journey. The project was not based on a main tutorial and had taken many hours of reading StackOverflow, and it really helped me understand full-stack application development and paved the way for my first development internship.
+
+### What I learned
+
+- Working with React.js - creating functional components and using hooks (`useState`, `useEffect`, `useRef`, etc.) in effective ways
+- Working with MongoDB noSQL database through the `mongoose` package
+- Using Environment variables with .env files to protect secrets
+- FIXING CORS ERRORS !!!
+
+### What's next
+
+- Implement user register/signing so each visitor has their own Calendar
+- Improve styling with a more modern CSS solution (i.e TailwindCSS, or just SCSS)
+- Enhance User Experience by potentially having the Add Event form as a pop-up modal instead of new page
+- Better scoring/streaking system to further incentivize users

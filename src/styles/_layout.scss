@@ -1,0 +1,45 @@
+:root {
+	--space-x: 1.75em;
+
+	@media screen and (min-width: 30em) {
+		--space-x: 5rem;
+	}
+
+	@media screen and (min-width: 70em) {
+		--space-x: 11rem;
+	}
+}
+
+section {
+	width: 100%;
+	padding: 2.5rem var(--space-x);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+	&:nth-of-type(odd) {
+		background-color: var(--clr-bg-lighter);
+	}
+
+	h2 {
+		text-align: center;
+		margin-bottom: 1em;
+		// text-transform: uppercase;
+	}
+}
+
+// @media (hover) {
+// 	section h2 {
+// 		position: relative;
+// 		&::after {
+// 			content: '';
+// 			background-color: var(--clr-primary);
+// 			position: absolute;
+// 			width: 2.5em;
+// 			height: 3px;
+// 			bottom: 8px;
+// 			left: 50%;
+// 			transform: translateX(-50%);
+// 		}
+// 	}
+// }
