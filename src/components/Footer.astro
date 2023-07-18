@@ -1,10 +1,6 @@
----
-const today = new Date();
----
-
-<footer class="footer">
-	<nav class="nav">
-		<ul class="links">
+<footer class="footer bg-[#f8f8f8] text-center p-2 text-lg">
+	<nav class="nav flex justify-center mt-4">
+		<ul class="links flex gap-4">
 			<li>
 				<a href="/">Home</a>
 			</li>
@@ -19,64 +15,29 @@ const today = new Date();
 			</li>
 		</ul>
 	</nav>
-	<div class="socials">
-		<ul>
+	<div class="socials flex justify-center items-center gap-[1em]">
+		<ul class="flex text-4xl mt-8 mb-7 gap-10">
 			<li>
-				<a href="https://github.com/bhuynhdev" target="_blank" rel="noopener noreferrer">
-					<i class="fa-brands fa-github" aria-label="Github" />
+				<a href="https://github.com/bhuynhdev" target="_blank" rel="noopener noreferrer" class="hover:color-[#28afb0]">
+					<i class="fa-brands fa-github" aria-label="Github"></i>
 				</a>
 			</li>
 			<li>
-				<a href="https://linkedin.com/in/bhuynhuc" target="_blank" rel="noopener noreferrer">
-					<i class="fa-brands fa-linkedin" aria-label="LinkedIn" />
+				<a href="https://linkedin.com/in/bhuynhuc" target="_blank" rel="noopener noreferrer" class="hover:color-[#28afb0]">
+					<i class="fa-brands fa-linkedin" aria-label="LinkedIn"></i>
 				</a>
 			</li>
 			<li>
-				<a href="https://twitter.com/bhuynhtweet" target="_blank" rel="noopener noreferrer">
-					<i class="fa-brands fa-twitter" aria-label="Twitter" />
+				<a href="https://twitter.com/bhuynhtweet" target="_blank" rel="noopener noreferrer" class="hover:color-[#28afb0]">
+					<i class="fa-brands fa-twitter" aria-label="Twitter"></i>
 				</a>
 			</li>
 			<li>
-				<a href="https://instagram.com/unflinch_camel" target="_blank" rel="noopener noreferrer">
-					<i class="fa-brands fa-instagram" aria-label="Instagram" />
+				<a href="https://instagram.com/unflinch_camel" target="_blank" rel="noopener noreferrer" class="hover:color-[#28afb0]">
+					<i class="fa-brands fa-instagram" aria-label="Instagram"></i>
 				</a>
 			</li>
 		</ul>
 	</div>
-	<p>&copy; {today.getFullYear()} Bao Huynh</p>
+	<p>&copy; {new Date().getFullYear()} Bao Huynh</p>
 </footer>
-
-<style lang="scss">
-	.footer {
-		background-color: #f8f8f8;
-		text-align: center;
-		padding: 0.5rem;
-		font-size: 1.1rem;
-	}
-
-	.nav {
-		display: flex;
-		justify-content: center;
-	}
-
-	.links {
-		display: flex;
-		gap: 1em;
-
-		li a:hover {
-			color: #28afb0;
-		}
-	}
-
-	.socials {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		ul {
-			display: flex;
-			font-size: 2em;
-			gap: 1em;
-			margin: 0.25em 0 0.5em 0;
-		}
-	}
-</style>

@@ -1,6 +1,10 @@
-@use 'reset';
-@use 'layout';
-@use 'markdown';
+@use "reset";
+@use "layout";
+@use "markdown";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 html {
 	font-size: clamp(1rem, 0.05vw + 1rem, 1.375rem);
@@ -9,7 +13,7 @@ html {
 }
 
 body {
-	font-family: 'Karla', sans-serif;
+	font-family: "Karla", sans-serif;
 	color: var(--clr-text);
 	line-height: 1.5;
 	background-color: var(--clr-bg);
@@ -22,14 +26,17 @@ a {
 
 h1 {
 	font-size: 2rem;
+	font-weight: bold;
 }
 
 h2 {
 	font-size: 1.75rem;
+	font-weight: bold;
 }
 
 h3 {
 	font-size: 1.5rem;
+	font-weight: bold;
 }
 
 h4,
