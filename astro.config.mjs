@@ -6,7 +6,7 @@ import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
 export default defineConfig({
-	site: "https://example.com",
-	integrations: [mdx(), sitemap(), tailwind({ applyBaseStyles: false })],
-	scopedStyleStrategy: "class"
+  site: "https://bhuynh.dev",
+  integrations: [mdx(), sitemap(), tailwind({ applyBaseStyles: false })],
+  scopedStyleStrategy: "class",
 });
