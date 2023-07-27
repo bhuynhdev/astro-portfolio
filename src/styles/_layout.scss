@@ -13,9 +13,6 @@
 section {
 	width: 100%;
 	padding: 2.5rem var(--space-x);
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
 
 	&:nth-of-type(odd) {
 		background-color: var(--clr-bg-lighter);

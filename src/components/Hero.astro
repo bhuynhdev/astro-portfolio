@@ -1,20 +1,31 @@
-<section id="hero">
-	<div class="text">
+<section
+	id="hero"
+	class="min-h-screen flex flex-col gap-8 justify-center lg:grid lg:grid-cols-[1fr_47%] lg:items-center lg:justify-between"
+>
+	<div class="text mt-12">
 		<div class="intro">
 			<h1>
-				Hi, I'm Bao Huynh,<br class="headline-break" /> a
+				Hi, I'm Bao Huynh,<br class="headline-break hidden lg:inline" /> a
 				<span class="highlight">Full-stack developer</span>.
 			</h1>
-			<p class="description">
+			<p class="description mt-9 w-11/12">
 				I&apos;m a passionate software developer striving to make applications that look smooth and perform great using modern
 				technologies.
 			</p>
 		</div>
-		<div class="cta">
-			<a href="#projects" class="cta__main">See my works</a>
-			<a href="#contact" class="cta__sub">Contact me</a>
+		<div class="cta mt-8 flex flex-col items-center gap-7 text-lg lg:flex-row lg:justify-start lg:gap-10">
+			<a
+				href="#projects"
+				class="cta__main w-44 text-center py-3 rounded-md text-neutral-100 bg-neutral-900 hover:underline hover:scale-110 transition-transform duration-200"
+				>See my works</a
+			>
+			<a
+				href="#contact"
+				class="cta__sub w-44 text-center py-3 rounded-md outline outline-1 outline-neutral-900 hover:underline hover:scale-110 transition-transform duration-200"
+				>Contact me</a
+			>
 		</div>
-		<ul class="mt-[1em] socials">
+		<ul class="socials mt-10 flex gap-9 text-4xl justify-center lg:justify-start">
 			<li>
 				<a href="https://github.com/bhuynhdev" target="_blank" rel="noopener noreferrer" aria-label="Github">
 					<i class="fa-brands fa-github" aria-hidden="true"></i>
@@ -37,7 +48,7 @@
 			</li>
 		</ul>
 	</div>
-	<div class="image">
+	<div class="illustration-container hidden lg:block lg:mt-12">
 		<img src="/undraw_code_thinking_re_gka2.svg" alt="" class="illustration" />
 		<img src="/plus-accent.svg" alt="plus signs" class="accent plus-accent" />
 		<img src="/curly-accent.svg" alt="plus signs" class="accent curly-accent" />
@@ -48,35 +59,11 @@
 </section>
 
 <style lang="scss">
-	.headline-break,
-	.image {
-		display: none;
-	}
-
-	section {
-		min-height: 100vh;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		gap: 2em;
-		.intro {
-			margin-bottom: 2em;
-			h1 {
-				margin-bottom: 0.75em;
-			}
-		}
-
-		> * {
-			margin-top: 3rem;
-		}
-	}
-
 	.highlight {
 		padding: 5px;
 		white-space: nowrap;
 		color: #f5f5f5;
 		position: relative;
-		// background-color: #111;
 		background-image: linear-gradient(to right, transparent 50%, black 50%);
 		background-size: 200%;
 		animation: expand 600ms ease-out forwards;
@@ -92,78 +79,9 @@
 		}
 	}
 
-	.cta {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		gap: 1.5em;
-		font-size: 1.1em;
-		a {
-			width: 17ch;
-			text-align: center;
-			padding: 0.75em;
-			border-radius: 5px;
-		}
-	}
-
-	.cta__main {
-		color: #f5f5f5;
-		background-color: #0f0f0f;
-	}
-
-	.cta__sub {
-		border: 1px solid #0f0f0f;
-	}
-
-	.socials {
-		display: flex;
-		gap: 1em;
-		font-size: 2.25em;
-		justify-content: center;
-		align-items: center;
-		margin-bottom: 0;
-	}
-
-	@media (hover) {
-		.cta a {
-			transform: scale(1);
-			transition: transform 200ms ease;
-		}
-		.cta a:hover {
-			transform: scale(1.07);
-			text-decoration: underline;
-		}
-	}
-
-	@media screen and (min-width: 60em) {
-		section {
-			display: grid;
-			grid-template-columns: 1fr 47%;
-			align-items: center;
-			justify-content: space-between;
-			.headline-break {
-				display: inline;
-			}
-			.description {
-				width: 90%;
-			}
-		}
-
-		.cta {
-			flex-direction: row;
-			justify-content: flex-start;
-			gap: 2.5em;
-		}
-
-		.socials {
-			justify-content: flex-start;
-		}
-
-		.image {
-			display: block;
+	@media screen and (min-width: 64em) {
+		.illustration-container {
 			position: relative;
-
 			.accent {
 				position: absolute;
 			}
