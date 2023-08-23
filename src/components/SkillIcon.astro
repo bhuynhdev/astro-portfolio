@@ -1,28 +1,28 @@
 ---
 type Props = {
-  iconName: string;
-  size: number; // Size of icon in pixel
+	iconName: string;
+	size: number; // Size of icon in pixel
 };
 
 const { iconName, size } = Astro.props;
 ---
 
 <figure class="skillIcon">
-  <img src={`/icons/${iconName.toLowerCase()}.svg`} alt={iconName} width={size} height={size} />
-  <figcaption>{iconName}</figcaption>
+	<img src={`/icons/${iconName.toLowerCase()}.svg`} alt={iconName} width={size} height={size} />
+	<figcaption>{iconName}</figcaption>
 </figure>
 
 <style lang="scss">
-  .skillIcon {
-    text-align: center;
-    width: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    row-gap: 0.35em;
-    figcaption {
-      font-size: 0.85rem;
-    }
-  }
+	.skillIcon {
+		text-align: center;
+		width: auto;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		row-gap: 0.35em;
+		figcaption {
+			font-size: 0.85rem;
+		}
+	}
 </style>
