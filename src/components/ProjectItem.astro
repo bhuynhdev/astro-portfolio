@@ -16,7 +16,7 @@ const { project } = Astro.props;
 	</div>
 	<div class="info mt-4 flex flex-col justify-center md:mt-0">
 		<h3 class="headline mb-3 text-2xl">
-			{project.blogpost ? <a href={`/blog/${project.blogpost}`}>{project.name}</a> : project.name}
+			{project.blogSlug ? <a href={`/blog/${project.blogSlug}`}>{project.name}</a> : project.name}
 		</h3>
 		<div class="links flex gap-4">
 			{
@@ -41,8 +41,8 @@ const { project } = Astro.props;
 			{project.skills.map((skill) => <li class="pill rounded-2xl bg-[#d1d1d1] px-4 py-1 text-xs">{skill}</li>)}
 		</ul>
 		{
-			project.blogpost && (
-				<a href={`/blog/${project.blogpost}`} class="read-more mt-5 self-center md:self-start ">
+			project.blogSlug && (
+				<a href={`/blog/${project.blogSlug}`} class="read-more mt-5 self-center md:self-start ">
 					Read more
 				</a>
 			)

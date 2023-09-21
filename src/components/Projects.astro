@@ -6,7 +6,7 @@ export type Project = {
 	img: { src: string; alt: string };
 	skills: string[];
 	github?: string;
-	blogpost?: string;
+	blogSlug?: string;
 	site?: string;
 };
 
@@ -20,7 +20,7 @@ const projects: Project[] = [
 		},
 		github: "https://github.com/bhuynhdev/ENED-1120-Robotics-Proj5",
 		skills: ["Python", "Matplotlib"],
-		blogpost: "project-ened-robot",
+		blogSlug: "project-ened-robot",
 	},
 	{
 		name: "Todo calendar",
@@ -32,7 +32,7 @@ const projects: Project[] = [
 		github: "https://github.com/bhuynhdev/Habitica-Calendia",
 		site: "https://timeblock-calendar.up.railway.app/",
 		skills: ["JavaScript", "React", "MongoDB", "Express.js"],
-		blogpost: "project-todo-calendar",
+		blogSlug: "project-todo-calendar",
 	},
 	{
 		name: "Photomosaic maker",
