@@ -1,0 +1,15 @@
+---
+type Props = {
+	summary: string;
+};
+
+const { summary } = Astro.props;
+---
+
+<details class="group">
+	<summary class="group-[open]:underline">{summary}</summary>
+	<div class="rounded-sm bg-slate-200 p-4">
+		<slot />
+		<!-- Body of details -->
+	</div>
+</details>
