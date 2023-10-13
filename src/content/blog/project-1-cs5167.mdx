@@ -69,7 +69,7 @@ Success story: Replacing an ingredients in the recipe with an alternative ingred
 Find new recipes through Google and Youtube; prefer text-based recipes
 
 4. Follow recipe by: Look at phone while cooking.
-→ Reported difficulities: dirty hands, long prep time, difficulty when need to multi-task
+   → Reported difficulities: dirty hands, long prep time, difficulty when need to multi-task
 
 5. Recipe criteria: Simplicity, how much time consumes, no niche ingredient, perceived decliousness (unique new flavor), good rating from others, recipe comes from a reputable website
 
@@ -93,16 +93,17 @@ Find new recipes through Google and Youtube; prefer text-based recipes
 Find new recipes through Google, Facebook, Youtube, Tiktok.
 
 4. Follow recipe by: Look at phone every 5 minutes while cooking.
-→ Reported difficulities: dirty hands so cannot hold phone, hard to remember all steps, forgot to buy ingredients, appliances not work
+   → Reported difficulities: dirty hands so cannot hold phone, hard to remember all steps, forgot to buy ingredients, appliances not work
 
 5. Recipe criteria: Looks good and taste good, max time 2 hour, no niche ingredient nor appliances, easy to complete
 
-7. Desired features:
+6. Desired features:
 
 - Know if the cooked dish succeeds or not
 - Know if recipe have good user rating
 - Filter recipe database based on time and complexity
 - Hands-free cooking
+
 </DetailsSummary>
 
 <DetailsSummary summary="Joshua - 2nd year">
@@ -178,17 +179,70 @@ From analysis of user interviews and user needs, I decided the design requiremen
 
 I chose the following 3 design challenges and made 3 round of [10-plus-10 sketches](https://blog.elementary.io/10x10-design-process):
 
-<DetailsSummary summary="1. How to allow user to follow and/or interract with the recipe content with minimal physical touch with the device (because user's hands might be dirty)">
-	Sketches picture
-</DetailsSummary>
+**1. How to allow user to follow and/or interract with the recipe content with minimal physical touch with the device (because user's hands might be dirty)"**
+   
+Idea brainstorm sketches
+<div class="grid grid-cols-2">
+![](/project-1-cs5167/Design-Challenge-1_page-0001.jpg)
 
-<DetailsSummary summary="2. How to quickly show the simplicity of a reciple (and compare against other recipes) when a user searches for new recipes">
-	Sketches picture
-</DetailsSummary>
+![](/project-1-cs5167/Design-Challenge-1_page-0002.jpg)
 
-<DetailsSummary summary="3. How to allow users to know how well they might enjoy a recipe's final taste">
-	Sketches picture
-</DetailsSummary>
+</div>
+
+Deeper sketches focusing on concept (8)
+
+<div class="grid grid-cols-2">
+
+![](/project-1-cs5167/Design-Challenge-1-Concept-8_page-0001.jpg)
+
+![](/project-1-cs5167/Design-Challenge-1-Concept-8_page-0002.jpg)
+
+</div>
+
+**2. How to quickly show the simplicity of a reciple (and compare against other recipes) when a user searches for new recipes"**
+
+Idea brainstorm sketches
+<div class="grid grid-cols-2">
+![](/project-1-cs5167/Design-Challenge-2_page-0001.jpg)
+
+![](/project-1-cs5167/Design-Challenge-2_page-0002.jpg)
+
+![](/project-1-cs5167/Design-Challenge-2_page-0003.jpg)
+
+
+</div>
+
+Deeper sketches focusing on concept (1) (I was only able to do 9 sketches)
+
+<div class="grid grid-cols-2">
+
+![](/project-1-cs5167/Design-Challenge-2-Concept-1_page-0001.jpg)
+
+![](/project-1-cs5167/Design-Challenge-2-Concept-1_page-0002.jpg)
+
+</div>
+
+
+
+**3. How to allow users to know how well they might enjoy a recipe's final taste"**
+
+Idea brainstorm sketches
+
+<div class="grid grid-cols-2">
+![](/project-1-cs5167/Design-Challenge-3_page-0001.jpg)
+
+![](/project-1-cs5167/Design-Challenge-3_page-0002.jpg)
+
+</div>
+
+Deeper sketches focusing on concept (2) (I was only able to do 4 sketches)
+
+<div class="grid grid-cols-2">
+
+![](/project-1-cs5167/Design-Challenge-3-Concept-2_page-0001.jpg)
+
+</div>
+
 
 ## Interface implementation
 
@@ -199,6 +253,15 @@ and an external screen that help users interract with the chosen recipe hands-fr
 
 Therefore, I've made a couple of sketches for the search functionalites,
 how the recipes are displayed, and the external screen's recipe navigation
+
+<div class='grid grid-cols-2'>
+![](/project-1-cs5167/Prototype-Sketches_page-0001.jpg)
+
+![](/project-1-cs5167/Prototype-Sketches_page-0003.jpg)
+
+![](/project-1-cs5167/Prototype-Sketches_page-0002.jpg)
+
+</div>
 
 ## Features
 
@@ -238,6 +301,7 @@ The Search bar has the "Search recipes..." placeholder text and the Advanced Fil
 #### Enable the user to input a complex set of selections:
 
 Here is the view for the advanced search:
+
 <div class="grid md:grid-cols-2 md:gap-8">
 ![](/project-1-cs5167/advanced-search.png)
 
@@ -250,6 +314,7 @@ When interracting with ranges input, the right text will interractively update t
 On submission, the JavaScript reads the form data and filters to only return recipes with the chosen keyword and options.
 
 The "Search" button is the **primary button** so it is highlighted using a blue background. The Cancel button is secondary and thus shouldn't have any highlighting
+
 </div>
 </div>
 
@@ -278,5 +343,3 @@ solely based on users' needs and wants (and not random imagination).
 Regrettably, the application was not as fleshed out as I want it to be. If I've worked more on the Smart Cookbook product, I'd implement a
 Personal profile feature with preferred level of cooking skills, allergies, dietary restrictions, etc. and an alternative ingredient features
 where users can explore alternative ingredients to a recipe so that they can enjoy the dish even if their inventory or budget does not have the full ingredient list
-
-
