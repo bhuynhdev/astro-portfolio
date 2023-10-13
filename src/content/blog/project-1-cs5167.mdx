@@ -2,7 +2,7 @@
 title: Project 1 - Interface to a smart cookbook
 description: Design process for a Smart Cookbook Interface - including user needs research, sketches, and prototypes
 pubDate: September 20, 2023
-updatedDate: September 21, 2023
+updatedDate: October 12, 2023
 ---
 
 import DetailsSummary from "../../components/DetailsSummary.astro";
@@ -33,7 +33,7 @@ import DetailsSummary from "../../components/DetailsSummary.astro";
 
 2. Once a week grocery → buy common items that is running out
 
-3. Only look new recipes often once a month → Keep coming back to familiar recipes.
+3. Only look new recipes once a month → Keep coming back to familiar recipes.
 
 Find new recipes through Google; mostly consume text-based recipes. Reportedly feeling too cumbersome to find new recipes: New techniques, new ingredients, new taste makes it time consuming
 
@@ -60,41 +60,38 @@ Success story: Replacing an ingredients in the recipe with an alternative ingred
 </DetailsSummary>
 
 <DetailsSummary summary="Triet - 5th year">
-What does the average week look like for you when it comes to cooking? (how many meals, how often do you cook ate)
-3 times a week - breakfast and lunch
-Once a week grocery → buy common items that is running out
-What appliances do you use during cooking?
-Do you follow recipe when cooking yes
-→ basic recipe on Google
-Don't look new recipes often. → Keep coming to certain recipes
-Too much work to find new recipes → New techniques, new ingredients, new taste makes it time consuming
+1. Cook 7+ times a week, mostly dinner and lunch
 
-What makes you pick a recipe over others? Recipe from hometown
-Criteria: Simplicity, how much time consumes, the taste - Indian, spicy ?
-How to use recipe: Look at it once to understand it → Do not hold phone all the time, come back when forget?
-→ cons: sometimes make mistake that does not go well
-→
-Any other problems:
-Recipes not have enough ingredient because forgot
-Success: Fried rice → did not have the ingredients → try some alternatives that taste good
-Desired features:
-Calculations for custom proportions
-Alternatives ingredients
-Easy to follow, easy to remember
-Pictures for each step → Know how wrong/right each step is
-Help with recipe in real time
-Inventory management
-Might try new recipe if it's attractive
+2. Go grocery 1-2 times a week → Look for discount first, then buy items, and think of recipes that go with them
 
-7. 
+3. Only look new recipes once a month → Keep coming back to familiar recipes.
+
+Find new recipes through Google; mostly consume text-based recipes. Reportedly feeling too cumbersome to find new recipes: New techniques, new ingredients, new taste makes it time consuming
+
+4. Follow recipe by: Only look at entire recipe once before starting to understand it
+
+→ Come back when forget, do not hold phone all the time
+→ Reported difficulities: sometimes make mistake that makes final dish unsatisfactory due to mis-doing a recipe step
+
+5. Recipe criteria: Simplicity, how much time consumes, familiary and preferred taste (Indian and spicy), dish attractiveness
+
+6. Disaster story: Not realize that didn't have enough ingredient before cooking
+
+Success story: Replacing an ingredients in the recipe with an alternative ingredient available at home
+
+7. Desired features:
+
+- Calculations for custom proportions
+- List some alternatives ingredients
+- Recipe text is easy to follow, easy to remember
+- Have pictures for each step → Know if the product at each step is how right or wrong
+- Help with recipe in real time
+- Inventory management
 
 </DetailsSummary>
 
-<details>
-<summary>Amy - 3rd year</summary>
-<div class="bg-slate-200 p-4 rounded-sm">
-</div>
-</details>
+<DetailsSummary summary="Amy - 3rd year">
+</DetailsSummary>
 
 <DetailsSummary summary="Joshua - 2nd year">
 1. Cook twice a week, mostly lunch and dinner
@@ -103,67 +100,171 @@ Might try new recipe if it's attractive
 
 3. Search for new recipe once a week when tired of eating same thing; for most days use in-memory recipes taught by family and friends.
 
-    Find new recipes through Google and chatGPT. Prefer text-based recipe content because more precise, and scroll back easily
+   Find new recipes through Google and chatGPT. Prefer text-based recipe content because more precise, and scroll back easily
 
 4. Before cooking, read the recipe carefully per step and try to remember, and then cook, and come back to check the phone for the next step
 
-    Follow the recipe about 70%, comfortable changing the recipe if needed
+   Follow the recipe about 70%, comfortable changing the recipe if needed
 
 5. Ranking of criteria to look for when choosing new recipe:
-    1. Visual aspect (how attractive and potentially tasty a dish is)
-    2. Ingredients are easy to buy and available
-    3. Easy techniques, not time consuming
+
+   1. Visual aspect (how attractive and potentially tasty a dish is)
+   2. Ingredients are easy to buy and available
+   3. Easy techniques, not time consuming
 
 6. Tell a success or a disaster story you had on your cooking history?
 
-    Disaster story: Cook too much rice for a reciple --> Final became soggy and unsatisfactory
+   Disaster story: Cook too much rice for a reciple --> Final became soggy and unsatisfactory
 
 7. Desired smart cookbook features:
-    - AI that understands personal preferences and tastes
-    - Recipe of the day --> Suggest novel recipes with good rating
+   - AI that understands personal preferences and tastes
+   - Recipe of the day --> Suggest novel recipes with good rating
 
 </DetailsSummary>
 
 ### User needs analysis
 
 Across the 4 different interviewee, there are some similaries and some differences. The following are the analysis and conclusions I drew:
+
 - There are two main ways users shop for grocery and determine what recipes to cook next:
-    1. Determine what recipes to cook first, and then buy required ingredients
-    2. Buy ingredients first (usually aim for discount price) and then think about what recipes fit those ingredients
+  1. Determine what recipes to cook first, and then buy required ingredients
+  2. Buy ingredients first (usually aim for discount price) and then think about what recipes fit those ingredients
 - All participants high favor simplicity and conserving time and see them as a deal breaker when choosing between recipes. After that, emphasis is placed on visual attractiveness and perceived taste of the dish.
 
-    --> **Conclusion**: User needs a way to quickly glance the different attributes of a recipe: simplicity, time commitment, ease of obtaining ingredients, visual attractiveness, etc.
+  --> **Conclusion**: User needs a way to quickly glance the different attributes of a recipe: simplicity, time commitment, ease of obtaining ingredients, visual attractiveness, etc.
+
 - About using recipe, some try to remember the recipe all at once but reportedly have problems mis-remembering a crucial step; some try to look at the recipe through their phone once in a while, but reported not having enough hands.
 
-    --> **Conclusion**: Users would love to be able to remember the recipe or use the recipe hands-free when cooking.
+  --> **Conclusion**: Users would love to be able to remember the recipe or use the recipe hands-free when cooking.
 
 - Desired features can be grouped into 4 main types:
-    1. Suggestion of new recipe; could be based on internal factors (user inventory and cooking skills) and/or external factors (other user's rating)
-    2. Intuitive display of recipe that is easy to follow and remember
-    3. Suggestion alternative versions of same recipes
-    4. Cooking help and support: Know if the product of each step is satisfactory
+  1. Suggestion of suitable new recipes; could be based on internal factors (user inventory and cooking skills) and/or external factors (other user's rating)
+  2. Intuitive display of recipe that is easy to follow and remember
+  3. Suggestion alternative versions of same recipes
+  4. Cooking help and support: Know if the product of each step is satisfactory
 
 ### Assumption
+
 - When used, the smart cookbook device is within 6ft distance with the user
 - The smart cookbook device has an AI (or connects to an external AI) that userstands user voice commands (like Alexa or Google Home)
-- The smart cookbook device can come with a mobile phone application to control the device's preferences (though the device itself might still contain some buttons for basic settings)
+- The smart cookbook device come with a mobile phone application to control the device's preferences (though the device itself might still contain some buttons for basic settings)
+- The user is well-versed with smartphones and technologies
 
 ### Design requirements
 
 From analysis of user interviews and user needs, I decided the design requirements for the Smart Cookbook device:
+
 1. User should be able to find their recipes based on their needs. These can include equipment, time or ingredient constraints.
-2. User should be able to gauge the visual attrativeness and taste of the recipe
-3. Once decided on a recipe, user should to be able to follow the recipe while cooking without using their limbs
-4. User should be able to clearly understand the directions in the recipes.
-5. User should be able to see opinions of similar demographics on the recipe
+2. User should be able to gauge the visual attrativeness of the recipe
+3. User should be suggested new recipe based on their preferences
+4. Once decided on a recipe, user should to be able to follow the recipe while cooking without using their limbs
+5. User should be able to clearly understand the directions in the recipes.
+6. User should be able to know how well they might enjoy a recipe's final taste
+7. User should be able to explore alternative ingredients for a recipe that would still keep ~90% original taste
 
 ### Design challenges and 10-plus-10 sketches
 
-I chose the following 3 design challenges:
-1. How to allow user to follow a recipe with minimal interaction with the device
-2. How to quickly show the simplicity of a reciple (and compare against other recipes) when a user searches for new recipes
-3. How to allow users to assess the opinions of other people on a recipe
+I chose the following 3 design challenges and made 3 round of [10-plus-10 sketches](https://blog.elementary.io/10x10-design-process):
 
-## Basic UI
+<DetailsSummary summary="1. How to allow user to follow and/or interract with the recipe content with minimal physical touch with the device (because user's hands might be dirty)">
+	Sketches picture
+</DetailsSummary>
 
-### C-level prototype sketches
+<DetailsSummary summary="2. How to quickly show the simplicity of a reciple (and compare against other recipes) when a user searches for new recipes">
+	Sketches picture
+</DetailsSummary>
+
+<DetailsSummary summary="3. How to allow users to know how well they might enjoy a recipe's final taste">
+	Sketches picture
+</DetailsSummary>
+
+## Interface implementation
+
+### Prototype sketches
+
+My vision for the smart cookbook product will include a smartphone application that allows user to search through the recipes
+and an external screen that help users interract with the chosen recipe hands-free while cooking
+
+Therefore, I've made a couple of sketches for the search functionalites,
+how the recipes are displayed, and the external screen's recipe navigation
+
+## Features
+
+### C-goal feature
+
+#### Basic UI elements
+
+From the [design goals](#design-challenges), the smart cookbook product UI shall have the following elements:
+
+- Control: Ability to apply different search options, ability to start a hands-free cooking session
+- Display: Display the recipe content (with an image to increase the desirability), display suggested recipes, display community ratings
+
+With these goals in minds, the basic UI is as follows:
+
+<div class="grid md:grid-cols-2 md:gap-8">
+![](/project-1-cs5167/welcome-screen.png)
+
+<div>
+The Welcome page of the mobile phone app uses **white space** used appropriately to separate different sections: the Navigation bar, the welcome message with some user info, and the suggested recipes list
+
+**Visual hierachy** principle is also used through bold and bigger texts to indicate import heading content such as the welcome message and recipe names
+
+The page displays the suggested recipes using **cards**, which strikes the balance between visual attractiveness
+and number of recipes that can fit on screen.
+
+Each card design contains an image at top for users to imagine the visual attractiveness of a dish, and preliminary recipe details that follow.
+The ⭐ icon represents community rating; the star icon has strong symbolism with ratings, and thus using this icon helps conserve space, improve visual interest, and communicate the idea quickly.
+The "Match Score" represents how much the system think this particular recipe will fit the user's personal taste.
+
+The Search bar has the "Search recipes..." placeholder text and the Advanced Filter button has underline styles as **signifiers** for potential user actions
+
+</div>
+</div>
+
+### B-goal feature
+
+#### Enable the user to input a complex set of selections:
+
+Here is the view for the advanced search:
+<div class="grid md:grid-cols-2 md:gap-8">
+![](/project-1-cs5167/advanced-search.png)
+
+<div>
+The Advanced Search view contains controls for different filtering options users might need, such as cook time, simplicity, protein choice.
+
+There are different types of control such as text inputs, ranges, and checkboxes.
+When interracting with ranges input, the right text will interractively update to tell what option the users have selected (i.e. &lt;1 hour, &lt;2 hour, or 3+ hour, etc.)
+
+On submission, the JavaScript reads the form data and filters to only return recipes with the chosen keyword and options.
+
+The "Search" button is the **primary button** so it is highlighted using a blue background. The Cancel button is secondary and thus shouldn't have any highlighting
+</div>
+</div>
+
+### A-goal features
+
+#### Connecting to a mock secondary device & Simulate the smart object in use
+
+When a user has found a recipe they like, they can "start a cooking session" which will then send the recipe content to a secondary screen.
+This secondary screen is supposedly wall-mounted and has camera that detects user gesture so they can interract (go to next step, previous step) without touching any screens
+
+![](/project-1-cs5167/start-cooking-session-button.png)
+
+Upon initiating a cooking session, the mobile app becomes a log of the user actions, and the secondary device displays the recipe directions step by step.
+User will then navigate Next, Previous, or End Session on the 2nd screen through gesture, or in this case, simulated buttons.
+
+Supposedly, the logs will be collected for an AI system to analyze which step the users often struggle the most
+so that it will take that information into account into suggesting new and more suitable recipe skill-level wise
+
+![](/project-1-cs5167/cooking-session-two-screens.png)
+
+## Final words
+
+I had a lot of fun doing this project. It was the first time where I actually collected user feedback and implemented an interface
+solely based on users' needs and wants (and not random imagination).
+
+Regrettably, the application was not as fleshed out as I want it to be. If I've worked more on the Smart Cookbook product, I'd implement a
+Personal profile feature with preferred level of cooking skills, allergies, dietary restrictions, etc. and an alternative ingredient features
+where users can explore alternative ingredients to a recipe so that they can enjoy the dish even if their inventory or budget does not have the full ingredient list
+
+
