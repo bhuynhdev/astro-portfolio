@@ -20,6 +20,9 @@ dependencies:
   astro:
     specifier: ^3.1.1
     version: 3.1.1(sass@1.68.0)
+  remark-custom-heading-id:
+    specifier: ^1.0.1
+    version: 1.0.1
   tailwindcss:
     specifier: ^3.3.3
     version: 3.3.3
@@ -2258,6 +2261,10 @@ packages:
     resolution: {integrity: sha512-Z1NL3Tb1M9wH4XESsCDEksWoKTdlUafKc4pt0GRwjUyXaCFZ+dc3g2erqB6zm3szA2IUSi7VnPI+o/9jnxh9hw==}
     dev: false
 
+  /mdast-heading-id@1.0.1:
+    resolution: {integrity: sha512-TrZqVGAAJ6BjzXTjvdHEUYqQqCJrdGTyKx/pyBBklBE7JpAdpaJy7c4b0KDXJGPEhyewDLjAS9ZYhD3yOUajlw==}
+    dev: false
+
   /mdast-util-definitions@5.1.2:
     resolution: {integrity: sha512-8SVPMuHqlPME/z3gqVwWY4zVXn8lqKv/pAhC57FuJ40ImXyBpmO5ukh98zB2v7Blql2FiHjHv9LVztSIqjY+MA==}
     dependencies:
@@ -2668,6 +2675,12 @@ packages:
       micromark-util-character: 1.2.0
       micromark-util-symbol: 1.1.0
       micromark-util-types: 1.1.0
+    dev: false
+
+  /micromark-heading-id@1.0.1:
+    resolution: {integrity: sha512-AcJm5cDKg0zPxXqaFK73KcwsnQzNUF4uhEdb/BCrr61W70z8XTuAnHTf7fOJ5a4EhF3TGADTsgqVzCko16gJwQ==}
+    dependencies:
+      micromark-util-symbol: 1.1.0
     dev: false
 
   /micromark-util-character@1.2.0:
@@ -3393,6 +3406,14 @@ packages:
       rehype-parse: 8.0.5
       rehype-stringify: 9.0.4
       unified: 10.1.2
+    dev: false
+
+  /remark-custom-heading-id@1.0.1:
+    resolution: {integrity: sha512-K9gIrLOmIdOsHusDRQL4U0ew7Q3WzzKsr3tquKuppV/kJwEYj4v+Bn/T9pJkkpS1m2i9y9lrsmh9vHs4sRPLIg==}
+    dependencies:
+      mdast-heading-id: 1.0.1
+      micromark-heading-id: 1.0.1
+      unist-util-visit: 4.1.2
     dev: false
 
   /remark-gfm@3.0.1:
