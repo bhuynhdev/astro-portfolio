@@ -22,16 +22,16 @@ const { project } = Astro.props;
 			{
 				project.github && (
 					<a href={project.github} target="_blank" rel="noopener noreferrer">
-						<i class="fa-brands fa-github" aria-hidden="true" aria-hidden="true" />
-						<span class="underline">View code</span>
+						<i class="fa-brands fa-github" aria-hidden="true" />
+						<span class="ml-1 underline">View code</span>
 					</a>
 				)
 			}
 			{
 				project.site && (
 					<a href={project.site} target="_blank" rel="noopener noreferrer">
-						<i class="fa-solid fa-link" aria-label="Live site" />
-						<span class="underline">Live demo</span>
+						<i class="fa-solid fa-link" aria-hidden="true" />
+						<span class="ml-1 underline">Live demo</span>
 					</a>
 				)
 			}
