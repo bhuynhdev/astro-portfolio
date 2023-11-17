@@ -1,9 +1,13 @@
 ---
 import ProjectItem from "./ProjectItem.astro";
+import timeblockImg from "../assets/timeblock.png"
+import legoRobotImg from "../assets/lego-g094009400.jpg"
+import mosaicImg from "../assets/mosaic.png"
+import type { ImageMetadata } from "astro";
 export type Project = {
 	name: string;
 	desc: string;
-	img: { src: string; alt: string };
+	img: { src: string | ImageMetadata; alt: string };
 	skills: string[];
 	github?: string;
 	blogSlug?: string;
@@ -15,7 +19,7 @@ const projects: Project[] = [
 		name: "Robot simulation",
 		desc: "A warehouse robot program that scans barcode and picks packages autonomously",
 		img: {
-			src: "/lego-g094009400.jpg",
+			src: legoRobotImg,
 			alt: "Lego car",
 		},
 		github: "https://github.com/bhuynhdev/ENED-1120-Robotics-Proj5",
@@ -26,7 +30,7 @@ const projects: Project[] = [
 		name: "Todo calendar",
 		desc: "A full-stack web app that integrates a calendar and a todolist with a score system for	increasing productivity",
 		img: {
-			src: "/timeblock.png",
+			src: timeblockImg,
 			alt: "Calendar on the wall with text Timeblocker Calendar plus Todolist",
 		},
 		github: "https://github.com/bhuynhdev/Habitica-Calendia",
@@ -38,7 +42,7 @@ const projects: Project[] = [
 		name: "Photomosaic maker",
 		desc: "An automation script for creating photomosaics - an image made of thousands smaller photos",
 		img: {
-			src: "/mosaic.png",
+			src: mosaicImg,
 			alt: "Mosaic effect with a zoomed out section",
 		},
 		github: "https://github.com/bhuynhdev/photomosaics",

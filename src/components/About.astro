@@ -1,8 +1,18 @@
+---
+import headshotImg from "../assets/headshot.png";
+import { Image } from "astro:assets";
+---
+
 <section class="about" id="about">
 	<!-- Show heading on top if on mobile, else show heading sideway -->
 	<h2 class="mobile-heading">About Me</h2>
 	<div class="avatar">
-		<img src="/headshot.png" alt="Bao Huynh in a suit, only head portion visible" />
+		<Image
+			src={headshotImg}
+			alt="Bao Huynh in a suit, only head portion visible"
+			class="m-0 rounded-lg object-contain"
+			height={500}
+		/>
 	</div>
 	<div class="content-wrapper">
 		<h2 class="desktop-heading">About Me</h2>
@@ -48,12 +58,6 @@
 		h2 {
 			margin-bottom: 0;
 		}
-	}
-
-	.avatar img {
-		max-height: 500px;
-		border-radius: 10px;
-		margin: 0;
 	}
 
 	.content-wrapper {

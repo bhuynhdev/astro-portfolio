@@ -4,6 +4,8 @@ description: ENED 1120 Robot Simulation Project
 pubDate: October 21, 2022
 updatedDate: July 14, 2023
 ---
+import { Image } from "astro:assets"
+import enedDemoGif from "../../assets/ened-simulation-demo.gif"
 
 ### Project overview
 
@@ -32,14 +34,14 @@ For the mid-term demonstration, we used the library `ev3dev2` to interface Pytho
 
 For the final demonstration, we used the library `matplotlib` to draw shapes that represent my robot and the area, and continuously update the graph with new positions of the rectangles to show how our robot would move. The goal is to develop logic of the robot not only moving, but also picking up randomized boxes locations while avoiding road obstacles
 
-![Graphs with rectangles and circles](/ened-matplotlib.png)
+![Graphs with rectangles and circles](../../assets/ened-matplotlib.png)
 
 - For this task, we opted to use **Object Orientated Programming** to manage the complexity of all the different components. The code includes _Robot_ class for updating the robot's coordinating and simulating the color sensor and the storage functionality, _Backend_ class for generating all the numerical coordiates of boxes and obstacles, and _Frontend_ class that uses `matplotlib`'s patches to actually draw out the components with colors
 
 - The logic for the robot's movement was as followed: The robot will continuously scan through all the shelves until it encounters a box; then the robot slows down and takes small steps to read the box's black-kwhite barcode using the color sensor's reflective mode. If that is the correct box, the robot puts the box in its storage and navigate to a terminal location. If not, the loop continues.
 
 <div>
-	<img src="/ened-simulation-demo.gif" alt="Demonstration GIF" width="450" loading="lazy" />
+	<Image src={enedDemoGif} alt="Demonstration GIF" width="450" loading="lazy" />
 </div>
 
 ### Challenges
