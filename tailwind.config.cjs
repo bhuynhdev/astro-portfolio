@@ -13,6 +13,9 @@ module.exports = {
 				350: "350ms",
 				400: "400ms",
 			},
+			gridTemplateColumns: {
+				"fluid": "repeat(auto-fit, minmax(300px, 525px))"
+			}
 		},
 	},
 	plugins: [],

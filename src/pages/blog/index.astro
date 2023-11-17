@@ -5,6 +5,7 @@ import Footer from "../../components/Footer.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts";
 import { getCollection } from "astro:content";
 import FormattedDate from "../../components/FormattedDate.astro";
+import { Image } from "astro:assets";
 
 const posts = (await getCollection("blog")).sort((a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf());
 ---
@@ -26,21 +27,44 @@ const posts = (await getCollection("blog")).sort((a, b) => a.data.pubDate.valueO
 				font-style: italic;
 				color: #595959;
 			}
-			ul li a:visited {
+			/* ul li a:visited {
 				color: #8e32dc;
+			} */
+
+			.glass {
+				background-image: linear-gradient(rgba(188, 188, 188, 0.35), rgba(0, 0, 0, 0.5));
+				backdrop-filter: blur(7.5px);
 			}
 		</style>
 	</head>
 	<body>
 		<Header />
 		<main>
-			<section>
-				<ul>
+			<section aria-labelledby="blog-h1">
+				<div class="mb-16 mt-16 flex flex-col items-center justify-between md:mb-20 lg:flex-row">
+					<h1 id="blog-h1">Bao Huynh's blog</h1>
+					<p class="max-w-[40ch] text-center text-lg text-gray-700 md:text-right">
+						Collections of my projects, experiences, and learnings throughout my programming journey
+					</p>
+				</div>
+				<ul class="grid-cols-fluid grid place-content-center gap-12 xl:place-content-between">
 					{
 						posts.map((post) => (
-							<li>
-								<FormattedDate date={post.data.pubDate} />
-								<a href={`/blog/${post.slug}/`}>{post.data.title}</a>
+							<li class="flex flex-col">
+								<div class="relative mb-6 aspect-video overflow-hidden bg-gray-500 shadow-md">
+									{post.data.cover && <Image src={post.data.cover} alt="Hero image" />}
+									<div class="glass absolute bottom-0 left-0 w-full border-t-[0.5px] p-4 text-white">
+										<p> {post.data.pubDate.toLocaleDateString("en-us", { year: "numeric", month: "short", day: "numeric" })} </p>
+									</div>
+								</div>
+								<a href={`/blog/${post.slug}/`} class="mb-2 text-2xl font-bold hover:underline">
+									{post.data.title}
+								</a>
+								<p class="mb-2 text-gray-700">{post.data.description}</p>
+								<a class="text-sm font-bold" href={`/blog/${post.slug}/`}>
+									<span class="mr-2 hover:underline">Read post</span>
+									<i class="fa-solid fa-arrow-up-right-from-square" />
+								</a>
 							</li>
 						))
 					}
