@@ -4,10 +4,11 @@ import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import FormattedDate from "../components/FormattedDate.astro";
+import { Image } from "astro:assets";
 
 type Props = CollectionEntry<"blog">["data"];
 
-const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
+const { title, description, pubDate, updatedDate, cover } = Astro.props;
 ---
 
 <html lang="en">
@@ -19,7 +20,7 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 		<Header />
 		<main>
 			<article class="markdown">
-				{heroImage && <img width={720} height={360} src={heroImage} alt="" />}
+				{cover && <Image src={cover} alt="" class="h-96 w-full object-cover" />}
 				<h1 class="title">{title}</h1>
 				<FormattedDate date={pubDate} />
 				{
@@ -30,38 +31,37 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 					)
 				}
 				<hr />
-				<slot /> <!-- Blog content is injected here -->
+				<slot />
+				<!-- Blog content is injected here -->
 			</article>
 		</main>
 		<Footer />
-	</body>
+	</body><style lang="scss">
+		.title {
+			font-size: 2em;
+			margin: 0.25em 0 0;
+		}
+
+		hr {
+			border-top: 1px solid #ddd;
+			margin: 1rem 0;
+		}
+
+		.last-updated-on {
+			font-style: italic;
+		}
+
+		article {
+			min-height: 100vh;
+			padding: 5em var(--space-x);
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-start;
+			align-items: flex-start;
+		}
+
+		.date {
+			margin-bottom: 2em;
+		}
+	</style>
 </html>
-
-<style lang="scss">
-	.title {
-		font-size: 2em;
-		margin: 0.25em 0 0;
-	}
-
-	hr {
-		border-top: 1px solid #ddd;
-		margin: 1rem 0;
-	}
-
-	.last-updated-on {
-		font-style: italic;
-	}
-
-	article {
-		min-height: 100vh;
-		padding: 5em var(--space-x);
-		display: flex;
-		flex-direction: column;
-		justify-content: flex-start;
-		align-items: flex-start;
-	}
-
-	.date {
-		margin-bottom: 2em;
-	}
-</style>
