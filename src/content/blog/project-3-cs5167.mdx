@@ -75,6 +75,7 @@ We first sample the real world to understand what professors currently share wit
 We identified some commonality between the different images we captured:
 - Regardless of subjects taught and mode of teaching (online/offline), professors usually present material sequentially (through slides) and add in live interactive materials (i.e. running code, drawing diagrams, collaborative Google Docs) to illustate the points better or for class activity --> **Code: Presentation** (image 3, 4, 6, and 9)
 - During presentation of their content, professors often want solicit feedback from students, often by asking questions and looking for raised hands, or by using a technological solutions (i.e. Google Docs, quiz clickers, etc.) --> **Code: Feedback** (image 7, 8)
+- Professor usually references multiple visualizations, including off-screen monitors that display other reference materials, slide notes, or the next slide, to be able to demonstrate their lecture story more cohesively --> **Code: Hidden reference** (image 6)
 - Older classroom usually have big, center screens every student look to; more moderns classroom employs smaller "subscren" distributed throughout the room so that every students can see the board clearly --> **Code: Distribution** (image 2, 3, 6, and 10)
 
 **2. Question 2: Consider how professors could share their content in this new kind of classroom**
@@ -100,17 +101,40 @@ b. What role could personal devices or the touch-tables play in how professors p
 #### Professor content sharing
 
 **Hybrid sketches**
-<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="grid gap-6 grid-cols-1 md:grid-cols-2">
 
 ![](/project-3-cs5167/interactive_board_hybrid_sketch.png)
-Professor's whiteboard is now interactive and directly drawable and erasable
+Professor's whiteboard is interactive with multiple digital drawing tools including colors, select tool, calculator, eraser, etc.
 
 ![](/project-3-cs5167/class_view_ar_hybrid_sketch.png)
-Professor display screen is also AR-capable to enable student to view extra relevant personalized information
+Professor display screen is AR-capable to enable student to view extra relevant personalized information, such as hints or peers' answers.
 
-![](/project-3-cs5167/professor_view_hybrid_sketch.png)
-Class control system with AR information about real-time status of the class
+</div>
+
+**Figma designs**
+
+![](/project-3-cs5167/figma-presentation-control.png)
+Professor's presentation control interface including controls for room lightning, screens, speakers and microphones, and slide content. The presentation tool also suggests tips for a better lecture. This interface would be displayed on the Professor's personal device, whereas only the main screen in the middle get streamed to the big display board.
+
+#### Professor's content creation
+
+**Figma wireframes**
+![](/project-3-cs5167/figma-prof-content-creation.png)
+In this advanced and highly integrated interface for content creation, the Professor can create normal slides and then embed other cool elements into their slides to augment their lectures. Elements include normal text element, shape elements, or Canvas Quiz, Kahoot, Word Cloud, interactive holographic 3d models, etc. Elements list have a search bar. The professor would use this interface through their laptop and create the class material before lecture time. The content creation interface also includes options for animations.
+
 
 #### Room control interface
 
+**Hybrid sketches**
+<div class="grid gap-6 grid-cols-1 md:grid-cols-2">
+
+![](/project-3-cs5167/professor_view_hybrid_sketch.png)
+
+Class control system with AR information about real-time status of the class including attendance status, student engagement levels, and time remaining of lecture session.
+
 </div>
+
+**Figma designs**
+
+![](/project-3-cs5167/figma-room-control.png)
+Room control interface to be embeded onto the Professor's touch table or onto a wall. Room control features include advanced controls that manage the different inputs and ouputs devices (screens, speakers, and microphones), changing the brightness and volume level to fit with the lecture journey (for example, video viewing should require lower brightness environement) right from the Professor station. All options are spelled out clearly so that the Professor can quickly fine-tune the environment to their liking (no more fiddling random no-name buttons).
