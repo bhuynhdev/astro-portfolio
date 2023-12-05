@@ -47,16 +47,16 @@ We first sample the real world to understand what professors currently share wit
 
 ![](/project-3-cs5167/classroom-photo-code-demo.jpg)
 6\. Class material presentation: Live code demo
+
+![](/project-3-cs5167/photo-room-control.jpg)
+7\. Room control interface in the Swift 820 room
 </div>
 
 **Sketches**
 <div class="grid gap-2 grid-cols-1">
 
 ![](/project-3-cs5167/classroom-sketch-handraising.jpg)
-7\. Classroom discussion through students raising hands
-
-![](/project-3-cs5167/classroom-sketch-google-docs.jpg)
-8\. Classroom discussion through a Google Docs shared by the Professor
+8\. Classroom discussion through students raising hands
 
 ![](/project-3-cs5167/classroom-sketch-async-video.jpg)
 9\. Class material delivered asynchronously through recorded videos
@@ -70,15 +70,15 @@ We first sample the real world to understand what professors currently share wit
 
 #### Question exploration and sample scenarios
 
-**1. Question 1: Identify themes (and translate these themes into codes) in what you have captured**
+**Question 1: Identify themes (and translate these themes into codes) in what you have captured**
 
 We identified some commonality between the different images we captured:
 - Regardless of subjects taught and mode of teaching (online/offline), professors usually present material sequentially (through slides) and add in live interactive materials (i.e. running code, drawing diagrams, collaborative Google Docs) to illustate the points better or for class activity --> **Code: Presentation** (image 3, 4, 6, and 9)
-- During presentation of their content, professors often want solicit feedback from students, often by asking questions and looking for raised hands, or by using a technological solutions (i.e. Google Docs, quiz clickers, etc.) --> **Code: Feedback** (image 7, 8)
+- During presentation of their content, professors often want solicit feedback from students, often by asking questions and looking for raised hands, or by using a technological solutions (i.e. Google Docs, quiz clickers, etc.) --> **Code: Feedback** (image 8)
 - Professor usually references multiple visualizations, including off-screen monitors that display other reference materials, slide notes, or the next slide, to be able to demonstrate their lecture story more cohesively --> **Code: Hidden reference** (image 6)
 - Older classroom usually have big, center screens every student look to; more moderns classroom employs smaller "subscren" distributed throughout the room so that every students can see the board clearly --> **Code: Distribution** (image 2, 3, 6, and 10)
 
-**2. Question 2: Consider how professors could share their content in this new kind of classroom**
+**Question 2: Consider how professors could share their content in this new kind of classroom**
 
 a. What does it meant to have a larger and higher resolution display for presenting content to students?
 
@@ -91,7 +91,7 @@ b. What role could personal devices or the touch-tables play in how professors p
 
 - Personal devices and touch tables for each students also mean students can now directly interract with the class material through the touch screen, leading to a better note-taking processes or more interactive classroom engagement activities, as now the students can work and present their work at the speed of thought
 
-**3. Question 3: Write 3 short scenarios involving an imagined professor.  What classes do they teach?  What kinds of content do they need to present?**
+**Question 3: Write 3 short scenarios involving an imagined professor.  What classes do they teach?  What kinds of content do they need to present?**
 -	As a professor of communication design within DAAP, Jane Doe teaches classes such as Typography, Motion Graphics, and UX/UI. While she begins these classes with a lecture, often she is reviewing student’s work and providing critique or splitting students to review each other’s work. Students will print out their work for a class such as Typography and pin it to the wall, but for a class like Motion Graphics will simply show their work on a computer screen.  
 -	John Doe, a chemistry professor within A&S, often teaches classes such as Chemistry 1 or Organic Chemistry where he discusses the structure of different molecules. While he does put together a lecture presentation, Jason typically prefers to write on the chalk board. Most classes he will run out of space halfway through the class where he will then erase and what he’d drawn to free up space. Jason is also in charge of the Freshman Chemistry labs where he must oversee a number of TAs who run the day to day operations of the lab.
 - Isabel Doe is a professor at the Lindner College of Business where she teaches Marketing and Entrepreneurship. In her classes students are often working on group projects and then presenting their work in front of class. She does offer a hybrid option for her classes, which means sometimes group members are not in person which can be challenging when she is lecturing or giving groups time to work.
@@ -120,7 +120,7 @@ Professor's presentation control interface including controls for room lightning
 
 **Figma wireframes**
 ![](/project-3-cs5167/figma-prof-content-creation.png)
-In this advanced and highly integrated interface for content creation, the Professor can create normal slides and then embed other cool elements into their slides to augment their lectures. Elements include normal text element, shape elements, or Canvas Quiz, Kahoot, Word Cloud, interactive holographic 3d models, etc. Elements list have a search bar. The professor would use this interface through their laptop and create the class material before lecture time. The content creation interface also includes options for animations.
+In this advanced and highly integrated interface for content creation, the Professor can create normal text-based slides and then embed other cool elements into their slides to augment their lectures. Elements include normal text element, shape elements, or Canvas Quiz, Kahoot, Word Cloud, interactive holographic 3d models, etc. Elements list have a search bar. The professor would use this interface through their laptop and create the class material before lecture time. The content creation interface also includes options for animations.
 
 
 #### Room control interface
@@ -138,3 +138,38 @@ Class control system with AR information about real-time status of the class inc
 
 ![](/project-3-cs5167/figma-room-control.png)
 Room control interface to be embeded onto the Professor's touch table or onto a wall. Room control features include advanced controls that manage the different inputs and ouputs devices (screens, speakers, and microphones), changing the brightness and volume level to fit with the lecture journey (for example, video viewing should require lower brightness environement) right from the Professor station. All options are spelled out clearly so that the Professor can quickly fine-tune the environment to their liking (no more fiddling random no-name buttons).
+
+
+## Student interactions (B-level goals)
+
+### Pre-design work
+
+#### Sampling the real world
+
+**Photos**
+<div class="grid gap-2 grid-cols-1 md:grid-cols-3">
+
+![](/project-3-cs5167/photo-students-face-to-face-discussion.jpg)
+11\. Classroom activity; students do face-to-face discussion by moving themselves to sit at opposite sides of a table
+
+</div>
+
+**Sketches**
+
+![](/project-3-cs5167/classroom-sketch-google-docs.jpg)
+12\. Classroom activity; students participates through a Google Docs shared by the group leader
+
+![](/project-3-cs5167/sketch-student-presentation.jpg)
+13\. Student shares their work by presenting in front of the classroom
+
+**Real-world scenarios**
+
+14. In my class about Solar System Astronomy, groups of 4 students collaborate to write answers on an in-class handout worksheet provided by the Professor. This is effective if everyone is able to do the work to some extend and thus have discussions about how it should be done; but sometimes, this is ineffective if noone grasps the lecture well enough to perform the exercises.
+
+15. In my previous class about Programming Languages, each student was tasked with researching a new programming language not taught in class, and make some short slides about that language's features and usage to present at the first 5 minutes of each class
+
+16. In my previous class about Leadership Principles, we often had high-energy in-class activities such as playing "passing the ball around", or doing improvised comedy. Through these seemingly irrelevant activities, we observed and learned lessons about how the interactions between leaders and followers show up in real-life situations.
+
+17. In my class about User Interface Design, we had a puzzle-solving activity where groups of 4 gather to solve puzzles while the rest of the class observe their activity to infer lessons about users interact with objects and how group roles change over time to finish the common goal
+
+### Design
