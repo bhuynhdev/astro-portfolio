@@ -173,3 +173,47 @@ Room control interface to be embeded onto the Professor's touch table or onto a 
 17. In my class about User Interface Design, we had a puzzle-solving activity where groups of 4 gather to solve puzzles while the rest of the class observe their activity to infer lessons about users interact with objects and how group roles change over time to finish the common goal
 
 ### Design
+
+#### Student content viewing, creation, and sharing
+
+For students' interactions with the classroom, we make heavy use of the individual touch table provided for each students. Student can directly take note on the Professor's material through the touch table, or do various kinds of in-class quizzes (typing, free-drawing, etc.) at the speed of thoughts. The touch tables are also integrated with each other to allow students to share their works with their peer quickly.
+
+Utilizing the touch table capabilities also gives students an easy time to complete quizzes and activities in any kind of format. Students may create many types of work, including handwritten solutions to the problem, sketches or drawings, or typed responses, by using either the touch-pens provided or through a virtual keyboard (like in mobile phones).
+
+**Hybrid sketches**
+
+<div class="grid gap-6 grid-cols-1 md:grid-cols-2">
+
+![](/project-3-cs5167/desk_view_hybrid_sketch.png)
+
+Teacher's content is shared to each student student's table. From their individual touch tables, students can take note directly using a touch-compatible pen. A card reader is present at each table so that students can quickly login and access to their indidividual materials using their Bearcat Card. Every 1 second, the touch table saves the work students have done and synced it with their Canvas account.
+
+</div>
+
+**Figma designs**
+
+<div class="grid gap-6 grid-cols-1 md:grid-cols-2">
+
+![](/project-3-cs5167/figma-student-content-sharing.png)
+
+From their touch tables, students can take share their work via Bluetooth. A proximity sensor is used to show which students are closely with the student so that they can share their work to. Once a share requuest is made, other student can accept or decline. Students in a table group are automatically added shown in a group.
+
+</div>
+
+#### Student's in-class activity
+
+**Figma designs**
+
+<div class="grid gap-6 grid-cols-1 md:grid-cols-2">
+
+![](/project-3-cs5167/figma-student-quiz-taking.png)
+
+Student can take Professor's in-class quiz straight from their touch table using digital tools such as the touchpen or a virtual keyboard
+
+</div>
+
+#### Professor quiz management UI
+
+![](/project-3-cs5167/figma-prof-quiz-control.png)
+
+In our interfaces for [Professor content creation](#professors-content-creation), we showed that the Professor's slides can embed quizzes into their slides material. As a result, on presentation day, once the quiz is broadcasted to the students, the Professor's presentation interface changes to the **Quiz control** interface. From their station, the Professor can control the time of the quiz, the questions list, or create a new impromptu quiz on the fly using the tools in the left sidebar. The right sidebar shows the list of the responses from which the Professor can choose which one to share with the students.
