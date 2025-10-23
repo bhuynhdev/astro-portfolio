@@ -21,22 +21,21 @@ section {
 	h2 {
 		text-align: center;
 		margin-bottom: 1em;
-		// text-transform: uppercase;
 	}
 }
 
-// @media (hover) {
-// 	section h2 {
-// 		position: relative;
-// 		&::after {
-// 			content: '';
-// 			background-color: var(--clr-primary);
-// 			position: absolute;
-// 			width: 2.5em;
-// 			height: 3px;
-// 			bottom: 8px;
-// 			left: 50%;
-// 			transform: translateX(-50%);
-// 		}
-// 	}
-// }
+/* @media (hover) { */
+/* 	section h2 { */
+/* 		position: relative; */
+/* 		&::after { */
+/* 			content: ''; */
+/* 			background-color: var(--clr-primary); */
+/* 			position: absolute; */
+/* 			width: 2.5em; */
+/* 			height: 3px; */
+/* 			bottom: 8px; */
+/* 			left: 50%; */
+/* 			transform: translateX(-50%); */
+/* 		} */
+/* 	} */
+/* } */

@@ -1,17 +1,11 @@
-<header
-	class="page-header fixed left-0 top-0 z-50 flex w-full justify-between px-space-x py-3 text-xl text-gray-950 lg:py-[1.35vw]"
->
+<header class="page-header">
 	<a href="/">BHUYNH.DEV</a>
-	<label for="nav-toggle" class="burger flex cursor-pointer items-center lg:hidden">
+	<label for="nav-toggle" class="burger">
 		<span></span>
 	</label>
 	<input type="checkbox" id="nav-toggle" class="peer/toggle hidden" />
-	<nav
-		class="group absolute right-0 top-full w-full origin-top scale-y-0 bg-white pr-space-x shadow-md transition-transform duration-350 peer-checked/toggle:scale-y-100 md:bg-transparent md:shadow-none lg:[all:unset]"
-	>
-		<ul
-			class="flex list-none flex-col gap-2 pb-2.5 text-right font-semibold tracking-wide opacity-0 transition-opacity peer-checked/toggle:group-[]:opacity-100 lg:flex-row lg:justify-end lg:gap-[2vw] lg:p-0 lg:opacity-100"
-		>
+	<nav class="group lg:[all:unset]">
+		<ul class="lg:flex-row lg:justify-end lg:gap-[2vw] lg:p-0 lg:opacity-100">
 			<li class="nav-item">
 				<a href="/#about">About</a>
 			</li>
@@ -40,14 +34,70 @@
 </script>
 
 <!-- STYLE -->
-<style lang="scss">
+<style>
+	.page-header {
+		position: fixed;
+		inset: 0 0 auto auto;
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding-inline: var(--space-x);
+		padding-block: 0.75rem;
+		color: rgba(3, 7, 18, 1);
+		font-size: 1.25rem;
+		line-height: 1.75rem;
+		z-index: 10;
+	}
+
+	#nav-toggle {
+		display: none;
+	}
+
+	nav {
+		position: absolute;
+		padding-right: var(--space-x);
+		background-color: white;
+		top: 100%;
+		right: 0;
+		width: 100%;
+		transform-origin: top;
+		scale: 100% 0;
+		transition: scale 350ms;
+		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+		box-shadow:
+			0 4px 6px -1px rgb(0 0 0 / 0.1),
+			0 2px 4px -2px rgb(0 0 0 / 0.1);
+
+		ul {
+			opacity: 0;
+			transition: opacity 200ms;
+			display: flex;
+			flex-direction: column;
+			list-style-type: none;
+			gap: 0.5rem;
+			text-align: right;
+			padding-bottom: 0.625rem;
+			font-weight: 600;
+			letter-spacing: 0.025em;
+		}
+	}
+
+	#nav-toggle:checked + nav {
+		scale: 100%;
+		ul {
+			opacity: 100;
+		}
+	}
+
 	.header-scrolled {
 		background-color: #f9f9f9;
 		box-shadow: 0px 1.5px 8px rgba(#111, 0.15);
 	}
 
 	.burger {
-		// Create the tripple-bar burger
+		cursor: pointer;
+		/* Tripple-bar burger using just CSS & pseudo elements */
 		span,
 		span::before,
 		span::after {
@@ -72,9 +122,27 @@
 		}
 	}
 
+	@media screen and (min-width: 48em) {
+		nav {
+			background-color: rgba(#000, 0);
+		}
+	}
+
 	@media screen and (min-width: 64em) {
+		nav {
+			all: unset;
+		}
+
+		.burger {
+			display: none;
+		}
+
+		.page-header {
+			padding-block: 1.35vw;
+		}
+
 		@media (hover) {
-			// Add an animated underline on nav item hover
+			/* Animated underline on nav item hover */
 			.nav-item {
 				position: relative;
 				&::before {
