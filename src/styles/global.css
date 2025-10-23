@@ -1,7 +1,3 @@
-@use "reset";
-@use "layout";
-@use "markdown";
-
 html {
 	font-size: clamp(1rem, 0.05vw + 1rem, 1.375rem);
 	scroll-behavior: smooth;
